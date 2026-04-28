@@ -1,14 +1,5 @@
 """
-We are going to hit a new milestone together
-We are going to make our first classes
-classes are like a mini program
-they're used for many things, very often objects
-so to model enemies like a ton of enemies
-it can also be like bullets (different projectiles)
-depending on what you decide on they are also used
-for encapsulating(organizing) code, reusing code, extending functionality
-Smarter enemies, same enemies, different ablities
-there are different paradigms: object orientated programming (OOP)
+
 """
 import random
 import time
