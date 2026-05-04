@@ -34,11 +34,39 @@ class Course:
             name=assignment["name"]
             score=assignment["score"]
             points=assignment["points"]
-            
+
             output +=f"{name}|{score}/{points}\n"
 
     def display_course_grade(self):
+        grade=self.calc_grade()
+        return f"Overall Grade for {self.course_name}: {grade:.2f}%"
 
     def save_data(self):
+        filename = f"{self.course_name}.txt"
+
+        with open(filename, "w") as file:
+            for assignment in self.assignments:
+                name = assignment["name"]
+                score = assignment["score"]
+                points = assignment["points"]
+
+                file.write(f"{name},{score},{points}\n")
 
     def load_data(self):
+        filename = f"{self.course_name}.txt"
+        self.assignments = []
+        try:
+            with open(filename, "r") as file:
+                for line in file:
+                    name, score, points = line.strip().split(",")
+
+                    assignment = {
+                        "name": name,
+                        "score": int(score),
+                        "points": int(points)
+                    }
+
+                    self.assignments.append(assignment)
+
+        except FileNotFoundError:
+            return "No saved data found."

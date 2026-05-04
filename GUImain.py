@@ -8,4 +8,9 @@ root= tk.Tk()
 root.title("Course Tracker")
 root.geometry("400x400")
 
+
+
+
+
+
 root.mainloop()
