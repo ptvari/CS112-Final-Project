@@ -36,6 +36,7 @@ class Course:
             points=assignment["points"]
 
             output +=f"{name}|{score}/{points}\n"
+        return output
 
     def display_course_grade(self):
         grade=self.calc_grade()
