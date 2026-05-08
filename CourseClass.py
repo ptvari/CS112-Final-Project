@@ -28,14 +28,30 @@ class Course:
     def display_course_assignments(self):
         if not self.assignments:
             return "No assignments yet."
-        output= f"Assignments for {self.course_name}:\n"
-        output += "----------------------------------\n"
-        for assignment in self.assignments:
-            name=assignment["name"]
-            score=assignment["score"]
-            points=assignment["points"]
 
-            output +=f"{name}|{score}/{points}\n"
+        output = f"Assignments for {self.course_name}:\n"
+        output += "----------------------------------\n"
+
+        total_earned = 0
+        total_possible = 0
+
+        for assignment in self.assignments:
+            name = assignment["name"]
+            score = assignment["score"]
+            points = assignment["points"]
+
+            total_earned += score
+            total_possible += points
+
+            output += f"{name} | {score} / {points}\n"
+
+        output += "----------------------------------\n"
+        output += f"Total Points Earned: {total_earned}\n"
+        output += f"Total Points Possible: {total_possible}\n"
+
+        grade = self.calc_grade()
+
+
         return output
 
     def display_course_grade(self):
