@@ -46,6 +46,7 @@ entryName.grid(row=1, column=1, padx=5, pady=5)
 entryScore.grid(row=2, column=1, padx=5, pady=5)
 entryPoints.grid(row=3, column=1, padx=5, pady=5)
 
+#labels and their positions
 labelCourse= tk.Label(root,text="Course")
 labelCourse.grid(row=0, column=0, padx=5, pady=5, sticky="w")
 labelName= tk.Label(root, text="Assignment Name")
@@ -116,6 +117,8 @@ def load_data_gui():
     if message:
         output_label.config(text=message)
 
+
+#the buttons and their layouts
 tk.Button(root, text="Add Assignment", command=add_assignment_gui).grid(row=4, column=0, pady=5)
 
 tk.Button(root, text="Show Assignments", command=show_assignments).grid(row=4, column=1, pady=5)
