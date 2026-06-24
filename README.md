@@ -1,12 +1,16 @@
 # Grade Tracker
 
-A Python application that allows users to track assignments and calculate overall course grades.
+A Python application that allows students to track assignments and calculate overall course grades.
 
 ## Features
-- Add assignments
-- Track grades
-- Calculate averages
+- Store grades by class
+- Track assignments
+- Calculate averages automatically
+- Simple graphical user interface
 
-## Technologies
+## Technologies Used
 - Python
 - Tkinter
+
+## Author
+Adrian Teniente
